@@ -132,6 +132,8 @@ xinz.on('message-new', async(qul) => {
 			case 'menu': case 'help':
 				textnya = `	𝐗𝐈𝐍𝐙-𝐒𝐄𝐋𝐅𝐁𝐎𝐓
 
+
+\`\`\`▢ ${prefix}play\`\`\`
 \`\`\`▢ ${prefix}sticker\`\`\`
 \`\`\`▢ ${prefix}swm nama | author\`\`\`
 \`\`\`▢ ${prefix}takestick namma | author\`\`\`
