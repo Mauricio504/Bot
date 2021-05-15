@@ -183,10 +183,10 @@ xinz.on('message-new', async(qul) => {
 				aqul.sendFakeStatusWithImg(from, fakeimage, textnya, fake)
 				break
 case 'play':
-  if (!isRegister) return reply(mess.only.daftarB)
+  //if (!isRegister) return reply(mess.only.daftarB)
   if (args.length == 0) return reply(`Ejemplo: ${prefix + command} Me olvide de vivir`)
                     query = args.join(' ')
-		    fakee = fs.readFileSync('./src/img.jpg')
+		 //   fakee = fs.readFileSync('./src/img.jpg')
                     get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytplay?apikey=BandNao71&query=${query}`)
                     get_result = get_result.result
                     get_info = get_result.info
@@ -200,9 +200,9 @@ case 'play':
 		    ini_txt += `Si el audio no llega, puede descargar por aqui: :\n ${get_result.audio[3].link}\n\n`
 		    ini_txt += `Puede descargar tambien el video aqui: :\n ${get_result.video[0].link}\n`
                     ini_buffer = await getBuffer(get_info.thumbnail)
-                    await samu330.sendMessage(from, ini_buffer, image, { quoted: fvid, caption: ini_txt, thumbnail: fakee, contextInfo: {"forwardingScore": 9999, "isForwarded": true} })
+                    await aqul.sendMessage(from, ini_buffer, image, { quoted: qul, caption: ini_txt, contextInfo: {"forwardingScore": 9999, "isForwarded": true} })
                     get_audio = await getBuffer(get_result.audio[3].link)
-                    await samu330.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', duration :-999999999999999, filename: `${get_info.title}.mp3`, quoted: fvid })
+                    await aqul.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', duration :-999999999999999, filename: `${get_info.title}.mp3`, quoted: qul })
                     break
             case 'test':
                 aqul.sendText(from, 'oke')
